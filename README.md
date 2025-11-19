@@ -66,5 +66,4 @@ HELLO .STRINGZ "Hello, World!"
 ## References
 
 - [LC-3 VM Tutorial](https://www.jmeiners.com/lc3-vm/)
-- LC-3 designed by Yale N. Patt and Sanjay J. Patel
 
