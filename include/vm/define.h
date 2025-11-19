@@ -51,9 +51,9 @@ enum {
    conditions such as if (x > 0) { ... }.
 */
 enum { 
-  CON_FL_POS = 2 << 0,
-  CON_FL_ZERO = 2 << 1,
-  CON_FL_NEG = 2 << 2 
+  CON_FL_POS = 1 << 0,
+  CON_FL_ZERO = 1 << 1,
+  CON_FL_NEG = 1 << 2 
 };
 
 enum {

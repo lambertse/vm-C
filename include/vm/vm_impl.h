@@ -148,8 +148,8 @@ void op_ldi(uint16_t instr) {
 void op_ldr(uint16_t instr) {
   uint16_t r0 = GET_DR(instr);
   uint16_t r1 = GET_SR1(instr);
-  uint16_t pc_offset = __sign_extend(EXTRACT_BITS(instr, 0, 6), 6);
-  vm_reg[r0] = __mem_read(vm_reg[r1] + pc_offset);
+  uint16_t offset = __sign_extend(EXTRACT_BITS(instr, 0, 6), 6);
+  vm_reg[r0] = __mem_read(vm_reg[r1] + offset);
   __update_reg_cond(r0);
 }
 

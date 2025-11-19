@@ -9,6 +9,9 @@
 static uint16_t __swap16(uint16_t x);
 static void __read_image_file(FILE *file);
 static void __read_image(const char *image_path);
+
+
+
 uint16_t __swap16(uint16_t x) { return (x << 8) | (x >> 8); }
 
 void __read_image_file(FILE *file) {

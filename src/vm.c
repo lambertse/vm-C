@@ -10,6 +10,8 @@ int main(int argc, char *argv[]) {
   //   __read_image(argv[i]);
   // }
   __read_image("/Users/tri.le/src/opensource/lambertse/vm-C/app/2048.obj");
+  signal(SIGINT, handle_interrupt);
+  disable_input_buffering();
 
   vm_reg[REG_COND] = CON_FL_ZERO;
   vm_reg[REG_PC] = REG_PC_START;
@@ -48,7 +50,7 @@ int main(int argc, char *argv[]) {
       break;
     }
     case OP_LDI: {
-      op_ld(instr);
+      op_ldi(instr);
       break;
     }
     case OP_LDR: {
